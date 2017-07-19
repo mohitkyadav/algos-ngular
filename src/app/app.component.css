@@ -1,52 +1,28 @@
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
 }
-.selected {
-  background-color: #CFD8DC !important;
-  color: white;
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
 }
-.heroes {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
-}
-.heroes li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
   border-radius: 4px;
 }
-.heroes li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
-}
-.heroes li:hover {
+nav a:visited, a:link {
   color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
 }
-.heroes .text {
-  position: relative;
-  top: -3px;
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
 }
-.heroes .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+nav a.active {
+  color: #039be5;
 }
