@@ -30,16 +30,16 @@ var HeroesComponent = (function () {
     HeroesComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/detail', this.selectedHero.id]);
     };
+    HeroesComponent = __decorate([
+        core_1.Component({
+            selector: 'my-heroes',
+            templateUrl: './heroes.component.html',
+            styleUrls: ['./heroes.component.css']
+        }),
+        __metadata("design:paramtypes", [router_1.Router,
+            hero_service_1.HeroService])
+    ], HeroesComponent);
     return HeroesComponent;
 }());
-HeroesComponent = __decorate([
-    core_1.Component({
-        selector: 'my-heroes',
-        templateUrl: './heroes.component.html',
-        styleUrls: ['./heroes.component.css']
-    }),
-    __metadata("design:paramtypes", [router_1.Router,
-        hero_service_1.HeroService])
-], HeroesComponent);
 exports.HeroesComponent = HeroesComponent;
 //# sourceMappingURL=heroes.component.js.map

@@ -25,10 +25,10 @@ var HeroService = (function () {
         return this.getHeroes()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
+    HeroService = __decorate([
+        core_1.Injectable()
+    ], HeroService);
     return HeroService;
 }());
-HeroService = __decorate([
-    core_1.Injectable()
-], HeroService);
 exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map

@@ -18,24 +18,24 @@ var app_routing_module_1 = require("./app-routing.module");
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                app_routing_module_1.AppRoutingModule
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                dashboard_component_1.DashboardComponent,
+                hero_detail_component_1.HeroDetailComponent,
+                heroes_component_1.HeroesComponent
+            ],
+            providers: [hero_service_1.HeroService],
+            bootstrap: [app_component_1.AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            app_routing_module_1.AppRoutingModule
-        ],
-        declarations: [
-            app_component_1.AppComponent,
-            dashboard_component_1.DashboardComponent,
-            hero_detail_component_1.HeroDetailComponent,
-            heroes_component_1.HeroesComponent
-        ],
-        providers: [hero_service_1.HeroService],
-        bootstrap: [app_component_1.AppComponent]
-    })
-], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

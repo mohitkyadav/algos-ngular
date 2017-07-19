@@ -21,15 +21,15 @@ var DashboardComponent = (function () {
         this.heroService.getHeroes()
             .then(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
     };
+    DashboardComponent = __decorate([
+        core_1.Component({
+            selector: 'my-dashboard',
+            templateUrl: './dashboard.component.html',
+            styleUrls: ['./dashboard.component.css']
+        }),
+        __metadata("design:paramtypes", [hero_service_1.HeroService])
+    ], DashboardComponent);
     return DashboardComponent;
 }());
-DashboardComponent = __decorate([
-    core_1.Component({
-        selector: 'my-dashboard',
-        templateUrl: './dashboard.component.html',
-        styleUrls: ['./dashboard.component.css']
-    }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
-], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map
