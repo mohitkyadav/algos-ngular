@@ -2,5 +2,7 @@
 <ul>
   <li *ngFor="let item of contentItems">
     <h2>{{ item.name }}</h2>
+    <script src="https://gist-it.appspot.com/{{ item.html_url }}"></script>
+    <script data-main="https://gist-it.appspot.com/{{ item.html_url }}" src="http://requirejs.org/docs/release/2.1.14/minified/require.js"></script>
   </li>
 </ul>
