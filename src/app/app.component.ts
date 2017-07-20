@@ -8,7 +8,7 @@ import { trigger, transition, state, style, animate } from "@angular/animations"
   animations: [
     trigger('tr1', [
       state('smaller', style({
-        transform: 'scale(1)'
+        transform: 'scale(0)'
       })),
       state('larger', style({
         transform: 'scale(3)'
