@@ -1,7 +1,31 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.example-sidenav-fab-container {
+  width: 100%;
+  height: 90%;
+}
 
-div {
-  margin: 0 auto;
-  text-align: center;
-  width: 100px;
+.example-sidenav-fab-container md-sidenav {
+  max-width: 100%;
+  position: fixed;
+}
+
+.example-sidenav-fab-container .mat-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  display: flex;
+  overflow: visible;
+}
+
+.example-scrolling-content {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+md-sidenav {
+  width: 20%;
 }

@@ -19,7 +19,10 @@ export class ConentComponent {
   ngOnInit() {
     this.contentItemsTemp = this.contentService.fetchContent();
     this.contentItemsTemp.subscribe(
-      (data) => this.contentItems = data
+      (data) => this.contentItems = data.slice(12)
     )
+  }
+  animate() {
+    console.log("clicked");
   }
 }

@@ -1,6 +1,12 @@
 <h1>Content Page</h1>
-<ul>
-  <li *ngFor="let item of contentItems">
-    <h2>{{ item.name }}</h2>
-  </li>
-</ul>
+<div layout-gt-sm="row" layout="column">
+
+  <md-nav-list>
+        <button md-button (click)="animate()" class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
+          <div class="md-list-item-text">
+            <h4>{{item.name}}</h4>
+          </div>
+        </button>
+  </md-nav-list>
+
+</div>
