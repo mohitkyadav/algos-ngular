@@ -4,8 +4,8 @@
     <md-sidenav #sidenav mode="side" opened="true">
       <div class="example-scrolling-content">
         <md-nav-list>
-          <button md-button (click)="animate()" class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
-            <div class="md-list-item-text">
+          <button md-button class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
+            <div (click)="animate($event, item.download_url)" class="md-list-item-text">
               {{item.name}}
             </div>
           </button>
@@ -13,7 +13,7 @@
       </div>
     </md-sidenav>
     <div class="example-scrolling-content">
-
+      <pre>{{details}}</pre>
     </div>
     <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
       <md-icon>add</md-icon>

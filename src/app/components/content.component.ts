@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-
+import { Observable } from 'rxjs/Observable';
 import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
@@ -20,18 +19,18 @@ export class ConentComponent {
   constructor(private contentService: ContentService, private http: Http) {}
 
   ngOnInit() {
-    this.detailsTemp = this.http.get('https://raw.githubusercontent.com/iiitv/algos/master/.coafile').map(
-      (res) => res.toString()
-    );
-    this.detailsTemp.subscribe(
-      (data) => this.details = data
-    );
     this.contentItemsTemp = this.contentService.fetchContent();
     this.contentItemsTemp.subscribe(
       (data) => this.contentItems = data.slice(12)
     )
   }
-  animate() {
-    console.log("clicked");
+  animate(item) {
+    console.log(item.srcElement.outerText);
+    this.detailsTemp = this.http.get("https://raw.githubusercontent.com/iiitv/algos/master/" + item.srcElement.outerText + "/" + item.srcElement.outerText + '.c').map(
+      (res) => res.text(),
+    );
+    this.detailsTemp.subscribe(
+      (data) => this.details = data
+    );
   }
 }
