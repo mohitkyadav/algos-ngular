@@ -8,7 +8,6 @@ import { Links } from '../model/content.model';
 
 @Injectable()
 export class ContentService {
-  temp: Observable<Array<ContentItem>>;
   constructor(private http: Http) {}
 
   fetchContent() {

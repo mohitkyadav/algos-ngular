@@ -1,12 +1,21 @@
 <h1>Content Page</h1>
-<div layout-gt-sm="row" layout="column">
+  <md-sidenav-container class="example-sidenav-fab-container">
 
-  <md-nav-list>
-        <button md-button (click)="animate()" class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
-          <div class="md-list-item-text">
-            <h4>{{item.name}}</h4>
-          </div>
-        </button>
-  </md-nav-list>
+    <md-sidenav #sidenav mode="side" opened="true">
+      <div class="example-scrolling-content">
+        <md-nav-list>
+          <button md-button (click)="animate()" class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
+            <div class="md-list-item-text">
+              {{item.name}}
+            </div>
+          </button>
+        </md-nav-list>
+      </div>
+    </md-sidenav>
+    <div class="example-scrolling-content">
 
-</div>
+    </div>
+    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
+  </md-sidenav-container>
