@@ -4,7 +4,7 @@
       <div class="example-scrolling-content">
         <md-nav-list>
           <button md-button class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
-            <div (click)="animate($event)" class="md-list-item-text">
+            <div (click)="fetchCode($event)" class="md-list-item-text">
               {{item.name}}
             </div>
           </button>

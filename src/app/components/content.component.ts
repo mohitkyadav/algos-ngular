@@ -31,8 +31,7 @@ export class ConentComponent {
       (data) => this.contentItems = data.filter(elem => elem.type != 'file' && elem.name != ".bin")
     )
   }
-  animate(item) {
-    console.log(this.download_url);
+  fetchCode(item):any {
     console.log(item);
     for(var i = 0;i<this.contentItems.length;i++) {
       if(item.srcElement.outerText == this.contentItems[i].name) {
