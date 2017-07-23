@@ -38,17 +38,58 @@ export class ConentComponent {
       if(item.srcElement.outerText == this.contentItems[i].name) {
         this.contentItemsTemp = this.contentService.fetchFolderContent('https://api.github.com/repos/iiitv/algos/contents/' + item.srcElement.outerText);
         this.contentItemsTemp.subscribe(
-          (data) => this.download_url = data[0].download_url,
+          (data) => this.getCodes(data)
         )
-        console.log(this.download_url);
         break;
       }
     }
-    this.detailsTemp = this.http.get(this.download_url).map(
+
+  }
+  getCode(url, type) {
+    this.detailsTemp = this.http.get(url).map(
       (res) => res.text(),
     );
+    if(type == 'c')
     this.detailsTemp.subscribe(
       (data) => this.code_c = data
     );
+    if(type == 'cpp')
+    this.detailsTemp.subscribe(
+      (data) => this.code_cpp = data
+    );
+    if(type == 'java')
+    this.detailsTemp.subscribe(
+      (data) => this.code_java = data
+    );
+    if(type == 'py')
+    this.detailsTemp.subscribe(
+      (data) => this.code_py = data
+    );
+    if(type == 'go')
+    this.detailsTemp.subscribe(
+      (data) => this.code_go = data
+    );
+    if(type == 'js')
+    this.detailsTemp.subscribe(
+      (data) => this.code_js = data
+    );
+  }
+  getCodes(data) {
+    let jk : string;
+    let flag : boolean;
+    for(var i = 0;i<data.length;i++) {
+      let fileName = data[i].name;
+      jk = "";
+      flag = false;
+      for(var j=0; j < fileName.length; j++) {
+        if(flag) {
+          jk += fileName[j];
+        }
+        if(fileName[j] == '.'){
+          flag = true;
+        }
+      }
+      this.getCode(data[i].download_url, jk);
+    }
   }
 }
