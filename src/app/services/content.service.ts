@@ -15,4 +15,9 @@ export class ContentService {
       (response) => response.json()
     )
   }
+  fetchFolderContent(content_url) {
+    return this.http.get(content_url).map(
+      (response) => response.json()
+    )
+  }
 }

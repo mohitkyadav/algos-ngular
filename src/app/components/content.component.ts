@@ -13,8 +13,15 @@ import { Links } from '../model/content.model';
 export class ConentComponent {
   contentItemsTemp: Observable<Array<ContentItem>>;
   contentItems: Array<ContentItem>;
+  folderItems: Array<ContentItem>;
   detailsTemp: Observable<string>;
-  details: string;
+  code_c: string;
+  code_cpp: string;
+  code_java: string;
+  code_js: string;
+  code_go: string;
+  code_py: string;
+  download_url: string;
 
   constructor(private contentService: ContentService, private http: Http) {}
 
@@ -25,12 +32,23 @@ export class ConentComponent {
     )
   }
   animate(item) {
-    console.log(item.srcElement.outerText);
-    this.detailsTemp = this.http.get("https://raw.githubusercontent.com/iiitv/algos/master/" + item.srcElement.outerText + "/" + item.srcElement.outerText + '.c').map(
+    console.log(this.download_url);
+    console.log(item);
+    for(var i = 0;i<this.contentItems.length;i++) {
+      if(item.srcElement.outerText == this.contentItems[i].name) {
+        this.contentItemsTemp = this.contentService.fetchFolderContent('https://api.github.com/repos/iiitv/algos/contents/' + item.srcElement.outerText);
+        this.contentItemsTemp.subscribe(
+          (data) => this.download_url = data[0].download_url,
+        )
+        console.log(this.download_url);
+        break;
+      }
+    }
+    this.detailsTemp = this.http.get(this.download_url).map(
       (res) => res.text(),
     );
     this.detailsTemp.subscribe(
-      (data) => this.details = data
+      (data) => this.code_c = data
     );
   }
 }
