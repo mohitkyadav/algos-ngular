@@ -9,7 +9,7 @@ cd algos-ngular
 npm install
 ng serve --open
 ```
-# Author
+## Author
 
 Mohit Kumar Yadav
 
