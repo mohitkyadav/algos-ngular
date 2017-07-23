@@ -3,11 +3,11 @@
     <md-sidenav #sidenav mode="side" opened="true">
       <div class="example-scrolling-content">
         <md-nav-list>
-          <button md-button class="md-3-line side-nav-buttons" role="listitem" *ngFor="let item of contentItems">
-            <div (click)="fetchCode($event)" class="md-list-item-text">
+          <div class="md-list-item-text" *ngFor="let item of contentItems">
+              <button (click)="fetchCode($event)" md-button class="md-3-line side-nav-buttons" role="listitem">
               {{item.name}}
-            </div>
-          </button>
+            </button>
+          </div>
         </md-nav-list>
       </div>
     </md-sidenav>

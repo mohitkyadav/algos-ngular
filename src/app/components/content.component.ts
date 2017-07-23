@@ -34,12 +34,23 @@ export class ConentComponent {
   fetchCode(item):any {
     console.log(item);
     for(var i = 0;i<this.contentItems.length;i++) {
-      if(item.srcElement.outerText == this.contentItems[i].name) {
-        this.contentItemsTemp = this.contentService.fetchFolderContent('https://api.github.com/repos/iiitv/algos/contents/' + item.srcElement.outerText);
-        this.contentItemsTemp.subscribe(
-          (data) => this.getCodes(data)
-        )
-        break;
+      if(item.srcElement){
+        if(item.srcElement.outerText == this.contentItems[i].name) {
+          this.contentItemsTemp = this.contentService.fetchFolderContent('https://api.github.com/repos/iiitv/algos/contents/' + item.srcElement.outerText);
+          this.contentItemsTemp.subscribe(
+            (data) => this.getCodes(data)
+          )
+          break;
+        }
+      }
+      if(item.originalTarget){
+        if(item.originalTarget.innerText == this.contentItems[i].name) {
+          this.contentItemsTemp = this.contentService.fetchFolderContent('https://api.github.com/repos/iiitv/algos/contents/' + item.originalTarget.innerText);
+          this.contentItemsTemp.subscribe(
+            (data) => this.getCodes(data)
+          )
+          break;
+        }
       }
     }
 
