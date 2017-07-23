@@ -28,7 +28,7 @@ export class ConentComponent {
   ngOnInit() {
     this.contentItemsTemp = this.contentService.fetchContent();
     this.contentItemsTemp.subscribe(
-      (data) => this.contentItems = data.slice(12)
+      (data) => this.contentItems = data.filter(elem => elem.type != 'file')
     )
   }
   animate(item) {
@@ -76,7 +76,7 @@ export class ConentComponent {
   }
   getCodes(data) {
     let jk : string;
-    let flag : boolean;
+    let flag,c,java,go,js,py,cpp : boolean = false;
     for(var i = 0;i<data.length;i++) {
       let fileName = data[i].name;
       jk = "";
@@ -89,7 +89,19 @@ export class ConentComponent {
           flag = true;
         }
       }
+      if(jk == 'c') c = true;
+      if(jk == 'java') java = true;
+      if(jk == 'go') go = true;
+      if(jk == 'js') js = true;
+      if(jk == 'cpp') cpp = true;
+      if(jk == 'py') py = true;
       this.getCode(data[i].download_url, jk);
     }
+    if(!c) this.code_c = null;
+    if(!cpp) this.code_cpp = null;
+    if(!java) this.code_java = null;
+    if(!go) this.code_go = null;
+    if(!js) this.code_js = null;
+    if(!py) this.code_py = null;
   }
 }
