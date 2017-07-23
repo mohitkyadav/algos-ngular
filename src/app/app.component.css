@@ -3,3 +3,7 @@
   // Every toolbar row uses a flexbox row layout.
   flex: 1 1 auto;
 }
+
+.button-github {
+  margin: 0 50px 0 0;
+}
