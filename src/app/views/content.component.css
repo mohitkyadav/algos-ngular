@@ -32,3 +32,8 @@
 md-sidenav {
   width: 20%;
 }
+
+md-tab {
+  flex: 1 1 auto;
+  position: fixed;
+}

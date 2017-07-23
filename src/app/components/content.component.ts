@@ -28,7 +28,7 @@ export class ConentComponent {
   ngOnInit() {
     this.contentItemsTemp = this.contentService.fetchContent();
     this.contentItemsTemp.subscribe(
-      (data) => this.contentItems = data.filter(elem => elem.type != 'file')
+      (data) => this.contentItems = data.filter(elem => elem.type != 'file' && elem.name != ".bin")
     )
   }
   animate(item) {
