@@ -1,4 +1,3 @@
-<h1>Content Page</h1>
   <md-sidenav-container class="example-sidenav-fab-container">
 
     <md-sidenav #sidenav mode="side" opened="true">
@@ -12,15 +11,37 @@
         </md-nav-list>
       </div>
     </md-sidenav>
-    <div class="example-scrolling-content">
-      <pre>{{code_c}}</pre>
-      <pre>{{code_java}}</pre>
-      <pre>{{code_cpp}}</pre>
-      <pre>{{code_py}}</pre>
-      <pre>{{code_go}}</pre>
-      <pre>{{code_js}}</pre>
-    </div>
-    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
-      <md-icon>add</md-icon>
-    </button>
+    <md-tab-group>
+      <md-tab label="C">
+        <div class="example-scrolling-content">
+          <pre>{{code_c}}</pre>
+        </div>
+      </md-tab>
+      <md-tab label="C++">
+        <div class="example-scrolling-content">
+          <pre>{{code_cpp}}</pre>
+        </div>
+      </md-tab>
+      <md-tab label="go">
+        <div class="example-scrolling-content">
+          <pre>{{code_go}}</pre>
+        </div>
+      </md-tab>
+      <md-tab label="Java">
+        <div class="example-scrolling-content">
+          <pre>{{code_java}}</pre>
+        </div>
+      </md-tab>
+      <md-tab label="js">
+        <div class="example-scrolling-content">
+          <pre>{{code_js}}</pre>
+        </div>
+      </md-tab>
+      <md-tab label="py">
+        <div class="example-scrolling-content">
+          <pre>{{code_py}}</pre>
+        </div>
+      </md-tab>
+
+    </md-tab-group>
   </md-sidenav-container>
