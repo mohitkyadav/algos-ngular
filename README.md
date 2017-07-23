@@ -7,3 +7,14 @@ cd algos-ngular
 npm install
 ng serve --open
 ```
+# Author
+
+Mohit Kumar Yadav
+
+* https://twitter.com/mukulkyadav
+* https://linkedin.com/in/mohitkyadav
+* https://github.com/mohitkyadav
+
+## license
+
+MIT
