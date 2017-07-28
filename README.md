@@ -3,7 +3,7 @@
 ## Live Demo
 http://mohitkyadav.github.io/algos-ngular
 
-## Source codes from iiitv/algos
+## Algorithms source codes from iiitv/algos
 https://github.com/iiitv/algos
 
 ## Key features
@@ -28,9 +28,9 @@ Mohit Kumar Yadav
 * https://linkedin.com/in/mohitkyadav
 * https://github.com/mohitkyadav
 
+## Contribute
+Found a bug, [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
+
 ## license
 
 MIT
-
-## Contribute
-*If you wish to, send a PR.*
