@@ -8,7 +8,7 @@ https://github.com/iiitv/algos
 
 ## Key features
 * Uses Github public API to fetch content and codes.
-* Always Up-to-date with [iiitv/algos](https://github.com/iiitv/algos) so no redeploying needed.
+* Always Up-to-date with [iiitv/algos](https://github.com/iiitv/algos), no need to redeploy.
 * Ahead of time, built using Angular 4 and Angular Material
 
 ```
