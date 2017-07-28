@@ -1,7 +1,10 @@
 # algos-ngular     [![Build Status](https://travis-ci.com/mohitkyadav/algos-ngular.svg?token=pLJkWav1wbnbGfoLfZtG&branch=master)](https://travis-ci.com/mohitkyadav/algos-ngular)
 
-## Deployed on Github pages
+## Live Demo
 http://mohitkyadav.github.io/algos-ngular
+
+## Source codes from iiitv/algos
+https://github.com/iiitv/algos
 
 ## Key features
 * Uses Github public API to fetch content and codes.
