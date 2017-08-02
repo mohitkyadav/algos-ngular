@@ -13,34 +13,40 @@
     </md-sidenav>
     <md-tab-group>
       <md-tab *ngIf="code_c" label="C">
-        <div class="example-scrolling-content">
-          <pre>{{code_c}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_c" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
       <md-tab *ngIf="code_cpp" label="C++">
-        <div class="example-scrolling-content">
-          <pre>{{code_cpp}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_cpp" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
       <md-tab *ngIf="code_go" label="go">
-        <div class="example-scrolling-content">
-          <pre>{{code_go}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_go" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
       <md-tab *ngIf="code_java" label="Java">
-        <div class="example-scrolling-content">
-          <pre>{{code_java}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_java" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
       <md-tab *ngIf="code_js" label="js">
-        <div class="example-scrolling-content">
-          <pre>{{code_js}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_js" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
       <md-tab *ngIf="code_py" label="py">
-        <div class="example-scrolling-content">
-          <pre>{{code_py}}</pre>
-        </div>
+        <pre>
+          <div [innerHTML]="code_py" class="example-scrolling-content">
+          </div>
+        </pre>
       </md-tab>
 
     </md-tab-group>
