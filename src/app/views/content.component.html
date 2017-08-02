@@ -19,7 +19,11 @@
       </md-tab>
       <md-tab *ngIf="code_cpp" label="C++">
         <div class="example-scrolling-content">
-          <pre>{{code_cpp}}</pre>
+          <pre>
+            <code class="language-clike">
+              {{code_cpp}}
+            </code>
+          </pre>
         </div>
       </md-tab>
       <md-tab *ngIf="code_go" label="go">
@@ -29,7 +33,11 @@
       </md-tab>
       <md-tab *ngIf="code_java" label="Java">
         <div class="example-scrolling-content">
-          <pre>{{code_java}}</pre>
+          <pre>
+            <code class="language-java">
+            {{code_java}}
+          </code>
+        </pre>
         </div>
       </md-tab>
       <md-tab *ngIf="code_js" label="js">
@@ -44,4 +52,5 @@
       </md-tab>
 
     </md-tab-group>
+
   </md-sidenav-container>
