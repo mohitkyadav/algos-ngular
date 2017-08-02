@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
+var Prism = require('prismjs');
 import { Links } from '../model/content.model';
 
 @Component({
@@ -15,7 +16,7 @@ export class ConentComponent {
   contentItems: Array<ContentItem>;
   folderItems: Array<ContentItem>;
   detailsTemp: Observable<string>;
-  code_c: string;
+  code_c: any;
   code_cpp: string;
   code_java: string;
   code_js: string;
@@ -57,31 +58,31 @@ export class ConentComponent {
   }
   getCode(url, type) {
     this.detailsTemp = this.http.get(url).map(
-      (res) => res.text(),
+      (res) => res.text()
     );
     if(type == 'c')
     this.detailsTemp.subscribe(
-      (data) => this.code_c = data
+      (data) => this.code_c = Prism.highlight(data, Prism.languages.clike)
     );
     if(type == 'cpp')
     this.detailsTemp.subscribe(
-      (data) => this.code_cpp = data
+      (data) => this.code_cpp = Prism.highlight(data, Prism.languages.clike)
     );
     if(type == 'java')
     this.detailsTemp.subscribe(
-      (data) => this.code_java = data
+      (data) => this.code_java = Prism.highlight(data, Prism.languages.clike)
     );
     if(type == 'py')
     this.detailsTemp.subscribe(
-      (data) => this.code_py = data
+      (data) => this.code_py = Prism.highlight(data, Prism.languages.clike)
     );
     if(type == 'go')
     this.detailsTemp.subscribe(
-      (data) => this.code_go = data
+      (data) => this.code_go = Prism.highlight(data, Prism.languages.clike)
     );
     if(type == 'js')
     this.detailsTemp.subscribe(
-      (data) => this.code_js = data
+      (data) => this.code_js = Prism.highlight(data, Prism.languages.javascript)
     );
   }
   getCodes(data) {
