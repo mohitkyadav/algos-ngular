@@ -4,6 +4,13 @@ import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
 var Prism = require('prismjs');
+
+import "prismjs"
+import "prismjs/components/prism-java"
+import "prismjs/components/prism-go"
+import "prismjs/components/prism-csharp"
+import "prismjs/components/prism-python"
+
 import { Links } from '../model/content.model';
 
 @Component({
@@ -33,7 +40,6 @@ export class ConentComponent {
     )
   }
   fetchCode(item):any {
-    console.log(item);
     for(var i = 0;i<this.contentItems.length;i++) {
       if(item.srcElement){
         if(item.srcElement.outerText == this.contentItems[i].name) {
@@ -62,23 +68,23 @@ export class ConentComponent {
     );
     if(type == 'c')
     this.detailsTemp.subscribe(
-      (data) => this.code_c = Prism.highlight(data, Prism.languages.clike)
+      (data) => this.code_c = Prism.highlight(data, Prism.languages.csharp)
     );
     if(type == 'cpp')
     this.detailsTemp.subscribe(
-      (data) => this.code_cpp = Prism.highlight(data, Prism.languages.clike)
+      (data) => this.code_cpp = Prism.highlight(data, Prism.languages.csharp)
     );
     if(type == 'java')
     this.detailsTemp.subscribe(
-      (data) => this.code_java = Prism.highlight(data, Prism.languages.clike)
+      (data) => this.code_java = Prism.highlight(data, Prism.languages.java)
     );
     if(type == 'py')
     this.detailsTemp.subscribe(
-      (data) => this.code_py = Prism.highlight(data, Prism.languages.clike)
+      (data) => this.code_py = Prism.highlight(data, Prism.languages.python)
     );
     if(type == 'go')
     this.detailsTemp.subscribe(
-      (data) => this.code_go = Prism.highlight(data, Prism.languages.clike)
+      (data) => this.code_go = Prism.highlight(data, Prism.languages.go)
     );
     if(type == 'js')
     this.detailsTemp.subscribe(
