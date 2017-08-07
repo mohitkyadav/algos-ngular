@@ -1,4 +1,5 @@
-# algos-ngular     [![Build Status](https://travis-ci.com/mohitkyadav/algos-ngular.svg?token=pLJkWav1wbnbGfoLfZtG&branch=master)](https://travis-ci.com/mohitkyadav/algos-ngular)
+# algos-ngular     
+[![Build Status](https://travis-ci.com/mohitkyadav/algos-ngular.svg?token=pLJkWav1wbnbGfoLfZtG&branch=master)](https://travis-ci.com/mohitkyadav/algos-ngular)
 
 ## Live Demo
 http://mohitkyadav.github.io/algos-ngular
@@ -6,10 +7,10 @@ http://mohitkyadav.github.io/algos-ngular
 ## Algorithms source codes from iiitv/algos
 https://github.com/iiitv/algos
 
-## Key features
-* Uses Github public API to fetch content and codes.
+## Features
+* Uses Github public API to fetch algorithm codes.
 * Always Up-to-date with [iiitv/algos](https://github.com/iiitv/algos), no need to redeploy.
-* Ahead of time, built using Angular 4 and Angular Material
+* Built using Angular 4 and Angular Material
 
 ```
 npm install -g @angular/cli
@@ -29,7 +30,7 @@ Mohit Kumar Yadav
 * https://github.com/mohitkyadav
 
 ## Contribute
-Found a bug, [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
+Found a bug, please [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
 
 ## license
 
