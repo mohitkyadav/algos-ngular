@@ -1,5 +1,7 @@
 # algos-ngular     
 [![Build Status](https://travis-ci.com/mohitkyadav/algos-ngular.svg?token=pLJkWav1wbnbGfoLfZtG&branch=master)](https://travis-ci.com/mohitkyadav/algos-ngular)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/SolidScript/algos-ngula)
+
 
 ## Live Demo
 http://mohitkyadav.github.io/algos-ngular
