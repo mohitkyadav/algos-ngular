@@ -28,7 +28,7 @@ ng serve --open
 
 Mohit Kumar Yadav
 
-[<img src="https://image.flaticon.com/icons/svg/34/34238.svg" width="50">](https://twitter.com/mukulkyadav)
+[<img src="https://image.flaticon.com/icons/svg/34/34238.svg" width="50" padding="1">](https://twitter.com/mukulkyadav)
 [<img src="https://www.shareicon.net/download/2015/11/02/665921_internet.svg" width="50">](https://linkedin.com/in/mohitkyadav) 
 [<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50">](https://github.com/mohitkyadav) 
 
