@@ -35,6 +35,6 @@ Mohit Kumar Yadav
 ## Contribute
 Found a bug, please [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
 
-## license
+## License
 
-MIT
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](#) © SolidScripts
