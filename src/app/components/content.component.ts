@@ -29,6 +29,7 @@ export class ConentComponent {
   code_js: string;
   code_go: string;
   code_py: string;
+  code_cs: string;
   download_url: string;
 
   constructor(private contentService: ContentService, private http: Http) {}
@@ -89,6 +90,10 @@ export class ConentComponent {
     if(type == 'js')
     this.detailsTemp.subscribe(
       (data) => this.code_js = Prism.highlight(data, Prism.languages.javascript)
+    );
+    if(type == 'cs')
+    this.detailsTemp.subscribe(
+      (data) => this.code_cs = Prism.highlight(data, Prism.languages.csharp)
     );
   }
   getCodes(data) {
