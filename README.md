@@ -1,4 +1,4 @@
-# algos-ngular [![Build Status](https://www.travis-ci.org/SolidScript/algos-ngular.svg?branch=master)](https://travis-ci.org/SolidScript/algos-ngular) [<img src="https://angular.io/assets/images/logos/angular/angular.svg" align="right" width="130">](https://angular.io/) 
+# algos-ngular [![Build Status](https://www.travis-ci.org/mohitkyadav/algos-ngular.svg?branch=master)](https://travis-ci.org/SolidScript/algos-ngular) [<img src="https://angular.io/assets/images/logos/angular/angular.svg" align="right" width="130">](https://angular.io/) 
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/SolidScript/algos-ngular)
 [![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](https://github.com/SolidScript/algos-ngular)
@@ -29,13 +29,13 @@ ng serve --open
 Mohit Kumar Yadav
 
 [<img src="https://image.flaticon.com/icons/svg/34/34238.svg" width="50" padding="10">](https://twitter.com/mukulkyadav)
-[<img src="https://www.shareicon.net/download/2015/11/02/665921_internet.svg" width="50" padding="10">](https://linkedin.com/in/mohitkyadav) 
-[<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50" padding="10">](https://github.com/mohitkyadav) 
+[<img src="https://www.shareicon.net/download/2015/11/02/665921_internet.svg" width="50" padding="10">](https://linkedin.com/in/mohitkyadav)
+[<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="50" padding="10">](https://github.com/mohitkyadav)
 
 ## Contribute
 Found a bug, please [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
 
 ## License
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](#) 
-> © SolidScripts
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](#)
+> © Mohit Kumar Yadav
