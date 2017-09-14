@@ -24,6 +24,12 @@
           </div>
         </pre>
       </md-tab>
+      <md-tab *ngIf="code_cs" label="C#">
+        <pre>
+          <div [innerHTML]="code_cs" class="example-scrolling-content">
+          </div>
+        </pre>
+      </md-tab>
       <md-tab *ngIf="code_go" label="go">
         <pre>
           <div [innerHTML]="code_go" class="example-scrolling-content">
