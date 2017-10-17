@@ -1,4 +1,4 @@
-# algos-ngular [![Build Status](https://www.travis-ci.org/mohitkyadav/algos-ngular.svg?branch=master)](https://travis-ci.org/mohitkyadav/algos-ngular) [<img src="https://angular.io/assets/images/logos/angular/angular.svg" align="right" width="130">](https://angular.io/) 
+# algos-ngular
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/SolidScript/algos-ngular)
 [![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](https://github.com/SolidScript/algos-ngular)
