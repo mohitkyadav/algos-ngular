@@ -34,11 +34,11 @@ pre {
   padding-left: 50px;
 }
 
-md-sidenav {
+mat-sidenav {
   width: 20%;
 }
 
-md-tab {
+mat-tab {
   flex: 1 1 auto;
   position: fixed;
 }

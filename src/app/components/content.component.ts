@@ -1,8 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
+
+
 var Prism = require('prismjs');
 
 import "prismjs"
@@ -18,7 +21,7 @@ import { Links } from '../model/content.model';
   templateUrl: '../views/content.component.html',
   styleUrls: ['../views/content.component.css']
 })
-export class ConentComponent {
+export class ContentComponent {
   contentItemsTemp: Observable<Array<ContentItem>>;
   contentItems: Array<ContentItem>;
   folderItems: Array<ContentItem>;
@@ -64,9 +67,9 @@ export class ConentComponent {
 
   }
   getCode(url, type) {
-    this.detailsTemp = this.http.get(url).map(
+    this.detailsTemp = this.http.get(url).pipe(map(
       (res) => res.text()
-    );
+    ));
     if(type == 'c')
     this.detailsTemp.subscribe(
       (data) => this.code_c = Prism.highlight(data, Prism.languages.csharp)

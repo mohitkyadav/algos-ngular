@@ -3,30 +3,31 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdMenuModule, MdSidenavModule, MdTabsModule,
-   MdCheckboxModule, MdToolbarModule, MdIconModule, MdCardModule } from '@angular/material'
+import { MatButtonModule, MatMenuModule, MatSidenavModule, MatTabsModule,
+   MatCheckboxModule, MatToolbarModule, MatIconModule, MatCardModule, MatListModule } from '@angular/material'
 
 import { AppComponent } from './app.component';
 import { ContentService } from './services/content.service';
-import { ConentComponent } from './components/content.component'
+import { ContentComponent } from './components/content.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConentComponent
+    ContentComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
-    MdMenuModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdTabsModule,
-    MdIconModule,
-    MdCardModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatIconModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [
     ContentService
