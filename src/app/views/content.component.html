@@ -1,59 +1,61 @@
-  <md-sidenav-container class="example-sidenav-fab-container">
+<mat-sidenav-container class="example-sidenav-fab-container">
 
-    <md-sidenav #sidenav mode="side" opened="true">
-      <div class="example-scrolling-content">
-        <md-nav-list>
-          <div class="md-list-item-text" *ngFor="let item of contentItems">
-              <button (click)="fetchCode($event)" md-button class="md-3-line side-nav-buttons" role="listitem">
-              {{item.name}}
-            </button>
-          </div>
-        </md-nav-list>
-      </div>
-    </md-sidenav>
-    <md-tab-group>
-      <md-tab *ngIf="code_c" label="C">
+  <mat-sidenav #sidenav role="region" mode="side" opened>
+    <div class="example-scrolling-content">
+      <mat-nav-list>
+        <div class="mat-list-item-text" *ngFor="let item of contentItems">
+          <button (click)="fetchCode($event)" mat-button class="mat-3-line side-nav-buttons" role="listitem">
+            {{item.name}}
+          </button>
+        </div>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  
+    <mat-tab-group>
+      <mat-tab *ngIf="code_c" label="C">
         <pre>
-          <div [innerHTML]="code_c" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_cpp" label="C++">
+            <div [innerHTML]="code_c" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_cpp" label="C++">
         <pre>
-          <div [innerHTML]="code_cpp" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_cs" label="C#">
+            <div [innerHTML]="code_cpp" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_cs" label="C#">
         <pre>
-          <div [innerHTML]="code_cs" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_go" label="go">
+            <div [innerHTML]="code_cs" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_go" label="go">
         <pre>
-          <div [innerHTML]="code_go" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_java" label="Java">
+            <div [innerHTML]="code_go" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_java" label="Java">
         <pre>
-          <div [innerHTML]="code_java" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_js" label="js">
+            <div [innerHTML]="code_java" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_js" label="js">
         <pre>
-          <div [innerHTML]="code_js" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
-      <md-tab *ngIf="code_py" label="py">
+            <div [innerHTML]="code_js" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
+      <mat-tab *ngIf="code_py" label="py">
         <pre>
-          <div [innerHTML]="code_py" class="example-scrolling-content">
-          </div>
-        </pre>
-      </md-tab>
+            <div [innerHTML]="code_py" class="example-scrolling-content">
+            </div>
+          </pre>
+      </mat-tab>
 
-    </md-tab-group>
-  </md-sidenav-container>
+    </mat-tab-group>
+
+</mat-sidenav-container>
