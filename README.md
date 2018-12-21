@@ -1,4 +1,4 @@
-# algos-ngular
+# algos-ngular [![Build Status](https://travis-ci.org/mohitkyadav/algos-ngular.svg?branch=master)](https://travis-ci.org/mohitkyadav/algos-ngular)
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/SolidScript/algos-ngular)
 [![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](https://github.com/SolidScript/algos-ngular)
@@ -7,8 +7,10 @@
 ## Live Demo
 http://mohitkyadav.github.io/algos-ngular
 
+
 ## Algorithms source codes from iiitv/algos
 https://github.com/iiitv/algos
+
 
 ## Features
 * Uses Github public API to fetch algorithm codes.
@@ -35,7 +37,9 @@ Mohit Kumar Yadav
 ## Contribute
 Found a bug, please [create an issue](https://github.com/mohitkyadav/algos-ngular/issues/new)
 
+
 ## License
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](#)
+
 > © Mohit Kumar Yadav

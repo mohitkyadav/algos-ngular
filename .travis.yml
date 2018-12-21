@@ -1,29 +1,11 @@
-sudo: false
-
 language: node_js
-
 node_js:
-  - "6"
+  - "11"
+  - "10"
 
-cache:
-  directories:
-    - $HOME/.cache/yarn
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-
-before_install:
-  - npm install
-
-install:
-  - yarn
+cache: npm
 
 script:
   - npm run build
-
-git:
-  depth: 1
+  - npm run lint
+  - npm run test

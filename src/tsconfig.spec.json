@@ -16,5 +16,11 @@
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "main.ts",
+    "polyfills.ts"
   ]
 }
