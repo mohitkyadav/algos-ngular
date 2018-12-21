@@ -1,6 +1,6 @@
 import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import { Http } from '@angular/http';
 
 
@@ -14,11 +14,11 @@ export class ContentService {
   fetchContent() {
     return this.http.get('https://api.github.com/repos/iiitv/algos/contents').pipe(map(
       (response) => response.json()
-    ))
+    ));
   }
   fetchFolderContent(content_url) {
     return this.http.get(content_url).pipe(map(
       (response) => response.json()
-    ))
+    ));
   }
 }
