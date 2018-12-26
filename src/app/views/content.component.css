@@ -1,5 +1,20 @@
-mat-sidenav-container {
+.sidenav-container {
   height: calc(100% - 128px);
+}
+
+.sidenav {
+  max-width: 400px;
+  width: 70%;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .side-nav-buttons {
