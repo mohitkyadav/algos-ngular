@@ -37,6 +37,7 @@ export class ContentComponent implements OnInit {
   code_cs: string;
   download_url: string;
   isLoading: boolean;
+  contentTitle: string;
   title: string;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -55,14 +56,16 @@ export class ContentComponent implements OnInit {
     this.contentItemsTemp.subscribe(
       (data) => this.contentItems = data.filter(elem => elem.type !== 'file' && elem.name !== '.bin')
     );
-    this.title = 'algos';
     this.isLoading = false;
+    this.contentTitle = '';
+    this.title = 'algos';
   }
   fetchCode(item): any {
     this.isLoading = true;
     for (let i = 0; i < this.contentItems.length; i++) {
       if (item.srcElement) {
         if (item.srcElement.outerText === this.contentItems[i].name) {
+          this.contentTitle = item.srcElement.outerText;
           const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item.srcElement.outerText}`;
           this.contentItemsTemp = this.contentService.fetchFolderContent(contentsUrl);
           this.contentItemsTemp.subscribe(
@@ -73,6 +76,7 @@ export class ContentComponent implements OnInit {
       }
       if (item.originalTarget) {
         if (item.originalTarget.innerText === this.contentItems[i].name) {
+          this.contentTitle = item.originalTarget.innerText;
           const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item.originalTarget.innerText}`;
           this.contentItemsTemp = this.contentService.fetchFolderContent(contentsUrl);
           this.contentItemsTemp.subscribe(
