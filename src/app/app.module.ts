@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatMenuModule, MatSidenavModule, MatTabsModule,
-   MatCheckboxModule, MatToolbarModule, MatIconModule, MatCardModule, MatListModule } from '@angular/material';
+   MatCheckboxModule, MatToolbarModule, MatIconModule, MatCardModule, MatListModule, MatProgressSpinnerModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ContentService } from './services/content.service';
@@ -27,7 +27,8 @@ import { ContentComponent } from './components/content.component';
     MatTabsModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     ContentService
