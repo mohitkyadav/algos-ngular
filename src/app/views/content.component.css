@@ -1,3 +1,7 @@
+mat-sidenav-container {
+  height: calc(100% - 128px);
+}
+
 .side-nav-buttons {
   width: 100%;
 }
@@ -48,3 +52,4 @@ mat-tab {
   flex: 1 1 auto;
   position: fixed;
 }
+

@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
 import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
-import { map } from 'rxjs/operators';
 
 
 const Prism = require('prismjs');
@@ -36,14 +37,25 @@ export class ContentComponent implements OnInit {
   code_cs: string;
   download_url: string;
   isLoading: boolean;
+  title: string;
 
-  constructor(private contentService: ContentService, private http: Http) {}
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private contentService: ContentService,
+    private http: Http
+  ) {}
 
   ngOnInit() {
     this.contentItemsTemp = this.contentService.fetchContent();
     this.contentItemsTemp.subscribe(
       (data) => this.contentItems = data.filter(elem => elem.type !== 'file' && elem.name !== '.bin')
     );
+    this.title = 'algos';
     this.isLoading = false;
   }
   fetchCode(item): any {
@@ -70,7 +82,6 @@ export class ContentComponent implements OnInit {
         }
       }
     }
-
   }
   getCode(url, type) {
     this.detailsTemp = this.http.get(url).pipe(map(
