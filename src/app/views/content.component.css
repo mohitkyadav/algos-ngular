@@ -3,18 +3,33 @@
 }
 
 .sidenav {
-  max-width: 400px;
-  width: 70%;
+  width: 100%;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+@media (min-width: 425px) {
+  .sidenav {
+    max-width: 300px;
+  }
 }
 
-.mat-toolbar.mat-primary {
+.mat-toolbar.mat-secondary {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.grow {
+  flex: 1;
+}
+
+mat-toolbar > .close-button {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  mat-toolbar > .close-button {
+    display: block;
+  }
 }
 
 .side-nav-buttons {

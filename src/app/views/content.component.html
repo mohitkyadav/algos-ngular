@@ -4,7 +4,19 @@
       [autoFocus]="false"
       [mode]="over"
       [opened]="(!isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+      <span>Menu</span>
+      <div class="grow"></div>
+      <button
+        class="close-button"
+        type="button"
+        aria-label="Close sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav close icon">close</mat-icon>
+      </button>
+      <span>{{contentTitle}}</span>
+    </mat-toolbar>
     <mat-nav-list>
       <div class="mat-list-item-text" *ngFor="let item of contentItems">
         <button (click)="drawer.toggle(); fetchCode($event);" mat-button class="mat-3-line side-nav-buttons" role="listitem">
@@ -15,14 +27,14 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar layout-align="center" color="secondary">
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>{{contentTitle}}</span>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>{{contentTitle}}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <mat-tab-group *ngIf="!isLoading">
