@@ -47,7 +47,7 @@ mat-toolbar > .close-button {
 
 mat-spinner {
   position: relative;
-  top: 50%;
+  top: calc(50% - 128px);
   margin: 0 auto;
 }
 
