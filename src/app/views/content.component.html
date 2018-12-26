@@ -2,8 +2,8 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
       [attr.role]="(!isHandset$ | async) ? 'dialog' : 'navigation'"
       [autoFocus]="false"
-      [mode]="over"
-      [opened]="(!isHandset$ | async)">
+      mode="push"
+      [opened]="!(!isHandset$ | async)">
     <mat-toolbar>
       <span>Menu</span>
       <div class="grow"></div>
