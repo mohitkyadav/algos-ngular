@@ -35,6 +35,7 @@ export class ContentComponent implements OnInit {
   code_py: string;
   code_cs: string;
   download_url: string;
+  isLoading: boolean;
 
   constructor(private contentService: ContentService, private http: Http) {}
 
@@ -43,8 +44,10 @@ export class ContentComponent implements OnInit {
     this.contentItemsTemp.subscribe(
       (data) => this.contentItems = data.filter(elem => elem.type !== 'file' && elem.name !== '.bin')
     );
+    this.isLoading = false;
   }
   fetchCode(item): any {
+    this.isLoading = true;
     for (let i = 0; i < this.contentItems.length; i++) {
       if (item.srcElement) {
         if (item.srcElement.outerText === this.contentItems[i].name) {
@@ -138,5 +141,6 @@ export class ContentComponent implements OnInit {
     if (!go) { this.code_go = null; }
     if (!js) { this.code_js = null; }
     if (!py) { this.code_py = null; }
+    this.isLoading = false;
   }
 }

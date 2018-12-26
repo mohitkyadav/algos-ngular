@@ -17,6 +17,12 @@
   overflow: visible;
 }
 
+mat-spinner {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+}
+
 .example-scrolling-content {
   overflow: auto;
   height: 100%;

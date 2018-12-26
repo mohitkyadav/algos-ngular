@@ -12,7 +12,7 @@
     </div>
   </mat-sidenav>
   
-    <mat-tab-group>
+    <mat-tab-group *ngIf="!isLoading">
       <mat-tab *ngIf="code_c" label="C">
         <pre>
             <div [innerHTML]="code_c" class="example-scrolling-content">
@@ -57,5 +57,7 @@
       </mat-tab>
 
     </mat-tab-group>
+
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
 
 </mat-sidenav-container>
