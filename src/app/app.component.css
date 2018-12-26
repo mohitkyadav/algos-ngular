@@ -4,11 +4,6 @@
   flex: 1 1 auto;
 }
 
-mat-toolbar {
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  z-index: 2;
-}
-
 mat-toolbar-row {
   overflow: auto;
 }
