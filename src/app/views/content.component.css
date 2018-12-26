@@ -1,3 +1,31 @@
+.sidenav-container {
+  height: calc(100% - 128px);
+}
+
+.sidenav {
+  width: 100%;
+}
+
+@media (min-width: 425px) {
+  .sidenav {
+    max-width: 300px;
+  }
+}
+
+.grow {
+  flex: 1;
+}
+
+mat-toolbar > .close-button {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  mat-toolbar > .close-button {
+    display: block;
+  }
+}
+
 .side-nav-buttons {
   width: 100%;
 }
@@ -19,7 +47,7 @@
 
 mat-spinner {
   position: relative;
-  top: 50%;
+  top: calc(50% - 128px);
   margin: 0 auto;
 }
 
@@ -48,3 +76,4 @@ mat-tab {
   flex: 1 1 auto;
   position: fixed;
 }
+

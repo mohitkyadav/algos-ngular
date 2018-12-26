@@ -9,6 +9,7 @@ import { MatButtonModule, MatMenuModule, MatSidenavModule, MatTabsModule,
 import { AppComponent } from './app.component';
 import { ContentService } from './services/content.service';
 import { ContentComponent } from './components/content.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContentComponent } from './components/content.component';
     MatIconModule,
     MatCardModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    LayoutModule
   ],
   providers: [
     ContentService

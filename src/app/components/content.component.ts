@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
 import { ContentService } from '../services/content.service';
 import { ContentItem } from '../model/content.model';
 import { Http } from '@angular/http';
-import { map } from 'rxjs/operators';
 
 
 const Prism = require('prismjs');
@@ -36,8 +37,19 @@ export class ContentComponent implements OnInit {
   code_cs: string;
   download_url: string;
   isLoading: boolean;
+  contentTitle: string;
+  title: string;
 
-  constructor(private contentService: ContentService, private http: Http) {}
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private contentService: ContentService,
+    private http: Http
+  ) {}
 
   ngOnInit() {
     this.contentItemsTemp = this.contentService.fetchContent();
@@ -45,12 +57,15 @@ export class ContentComponent implements OnInit {
       (data) => this.contentItems = data.filter(elem => elem.type !== 'file' && elem.name !== '.bin')
     );
     this.isLoading = false;
+    this.contentTitle = '';
+    this.title = 'algos';
   }
   fetchCode(item): any {
     this.isLoading = true;
     for (let i = 0; i < this.contentItems.length; i++) {
       if (item.srcElement) {
         if (item.srcElement.outerText === this.contentItems[i].name) {
+          this.contentTitle = item.srcElement.outerText;
           const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item.srcElement.outerText}`;
           this.contentItemsTemp = this.contentService.fetchFolderContent(contentsUrl);
           this.contentItemsTemp.subscribe(
@@ -61,6 +76,7 @@ export class ContentComponent implements OnInit {
       }
       if (item.originalTarget) {
         if (item.originalTarget.innerText === this.contentItems[i].name) {
+          this.contentTitle = item.originalTarget.innerText;
           const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item.originalTarget.innerText}`;
           this.contentItemsTemp = this.contentService.fetchFolderContent(contentsUrl);
           this.contentItemsTemp.subscribe(
@@ -70,7 +86,6 @@ export class ContentComponent implements OnInit {
         }
       }
     }
-
   }
   getCode(url, type) {
     this.detailsTemp = this.http.get(url).pipe(map(
