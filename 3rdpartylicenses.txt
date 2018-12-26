@@ -356,7 +356,11 @@ MIT
 
 @angular/material/tabs
 
+@angular/material/progress-spinner
+
 @angular/material/sidenav
+
+@angular/material/icon
 
 @angular/forms
 MIT
