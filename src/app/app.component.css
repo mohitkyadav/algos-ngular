@@ -1,6 +1,4 @@
 .example-fill-remaining-space {
-  // This fills the remaining space, by using flexbox.
-  // Every toolbar row uses a flexbox row layout.
   flex: 1 1 auto;
 }
 
@@ -13,7 +11,7 @@ mat-toolbar-row {
 }
 
 .button-github {
-  padding: 0 25px;
+  padding: 0 20px;
 }
 
 .grow {

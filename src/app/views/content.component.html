@@ -18,7 +18,7 @@
     </mat-toolbar>
     <mat-nav-list>
       <div class="mat-list-item-text" *ngFor="let item of contentItems">
-        <button (click)="drawer.toggle(); fetchCode($event);" mat-button class="mat-3-line side-nav-buttons" role="listitem">
+        <button (click)="drawer.toggle(); fetchCode(item.name);" style="text-align: left; text-transform: uppercase;" mat-button class="mat-3-line side-nav-buttons" role="listitem">
           {{item.name}}
         </button>
       </div>
@@ -29,11 +29,12 @@
       <button
         type="button"
         aria-label="Toggle sidenav"
-        mat-icon-button
+        mat-mini-fab
+        color="primary"
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>{{contentTitle}}</span>
+      <span style="text-transform: uppercase"> {{contentTitle}}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <mat-tab-group *ngIf="!isLoading">

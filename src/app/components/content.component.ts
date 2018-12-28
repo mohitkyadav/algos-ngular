@@ -61,12 +61,14 @@ export class ContentComponent implements OnInit {
     this.title = 'algos';
   }
   fetchCode(item): any {
+    console.log(item);
     this.isLoading = true;
     for (let i = 0; i < this.contentItems.length; i++) {
-      if (item.srcElement) {
-        if (item.srcElement.outerText === this.contentItems[i].name) {
-          this.contentTitle = item.srcElement.outerText;
-          const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item.srcElement.outerText}`;
+      if (item) {
+        if (item === this.contentItems[i].name) {
+          this.contentTitle = item;
+          const contentsUrl = `https://api.github.com/repos/iiitv/algos/contents/${item}`;
+          console.log(contentsUrl);
           this.contentItemsTemp = this.contentService.fetchFolderContent(contentsUrl);
           this.contentItemsTemp.subscribe(
             (data) => this.getCodes(data)
